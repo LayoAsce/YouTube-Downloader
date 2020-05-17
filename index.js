@@ -8,9 +8,9 @@ const app = express();
 
 app.use(cors());
 
-
-app.listen(4000, () => {
-    console.log('Server Works !!! At port 4000');
+const port = process.env.PORT || 4000
+app.listen(port, () => {
+    console.log(`Server Works !!! At port ${port}`);
 });
 
 //we need to make the server listen for get request on the path /download
